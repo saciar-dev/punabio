@@ -1,0 +1,38 @@
+// app global css in SCSS form
+@font-face {
+  font-family: itauRg;
+  src: url(../fonts/ItauDisplayPro_Rg.ttf);
+}
+
+// declare a class which applies it
+.itau-font-rg {
+  font-family: 'itauRg';
+}
+
+@font-face {
+  font-family: itauBlack;
+  src: url(../fonts/ItauDisplayPro_Blk.ttf);
+}
+
+// declare a class which applies it
+.itau-font-blk {
+  font-family: 'itauBlack';
+}
+
+@font-face {
+  font-family: itauBold;
+  src: url(../fonts/ItauDisplayPro_Bd.ttf);
+}
+
+// declare a class which applies it
+.itau-font-bd {
+  font-family: 'itauBold';
+}
+
+.bg-portugues {
+  background: #0060CC;;
+}
+
+.bg-espanol{
+  background: #FF6C0C;;
+}

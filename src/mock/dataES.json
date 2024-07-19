@@ -1,0 +1,204 @@
+[
+  {
+    "id": 1,
+    "pregunta": "¿En qué década el color naranja pasó a formar parte de la identidad visual de Itaú?",
+    "answerOptions": [
+      { "answerText": "Década de 1990", "isCorrect": false },
+      { "answerText": "Años 2000", "isCorrect": false },
+      { "answerText": "Década de 1880", "isCorrect": true },
+      { "answerText": "Década de 1970.", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 2,
+    "pregunta": "¿Cuál de las características de abajo se refiere a la tipografía Art Déco?",
+    "answerOptions": [
+      { "answerText": "Presencia de serif", "isCorrect": false },
+      { "answerText": "Caracteres derivados de formas geométricas", "isCorrect": true },
+      { "answerText": "Abundancia de líneas curvas", "isCorrect": false },
+      { "answerText": "Estrechamiento de los caracteres", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Qué motivó el surgimiento del UX design?",
+    "answerOptions": [
+      { "answerText": "La preocupación de las empresas por ofrecerles a los usuarios formas más simples y agradables de navegación en web y apps", "isCorrect": true },
+      { "answerText": "La necesidad de reducir costos con la propaganda digital", "isCorrect": false },
+      { "answerText": "El desarrollo de los lenguajes de programación en marketplaces virtuales", "isCorrect": false },
+      { "answerText": "Estrechamiento de los caracteres", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 4,
+    "pregunta": "¿En qué período el “i” digital apareció en la marca Itaú?",
+    "answerOptions": [
+      { "answerText": "1999-2000", "isCorrect": true },
+      { "answerText": "2010-2011", "isCorrect": false },
+      { "answerText": "2004-2005", "isCorrect": false },
+      { "answerText": "2016-2017", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 5,
+    "pregunta": "El fundador de la escuela Bauhaus, en 1919, fue:",
+    "answerOptions": [
+      { "answerText": "Le Corbusier", "isCorrect": false },
+      { "answerText": "Walter Gropius", "isCorrect": true },
+      { "answerText": "Frank Loyd Wright", "isCorrect": false },
+      { "answerText": "Mies van der Rohe", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 6,
+    "pregunta": "¿El diseño con estética psicodélica ganó más destaque en cuál década?",
+    "answerOptions": [
+      { "answerText": "1980", "isCorrect": false },
+      { "answerText": "1960", "isCorrect": false },
+      { "answerText": "1970", "isCorrect": true },
+      { "answerText": "1950", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 7,
+    "pregunta": "¿Qué es “Arquitectura de la Información” en el UX design?",
+    "answerOptions": [
+      { "answerText": "Es la combinación de frases y palabras en el desarrollo de una web, app u otra plataforma digital.", "isCorrect": false },
+      { "answerText": "Es la forma como las informaciones son estructuradas en el menú de una web", "isCorrect": false },
+      { "answerText": "Es la disposición de los links en las diferentes páginas de una web o plataforma digital", "isCorrect": false },
+      { "answerText": "Es la estructuración de un layout para una web, app u otra plataforma digital", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 8,
+    "pregunta": "¿En qué año las letras del logotipo de Itaú pasaron a ser amarillas?",
+    "answerOptions": [
+      { "answerText": "1990", "isCorrect": false },
+      { "answerText": "1992", "isCorrect": true },
+      { "answerText": "1988", "isCorrect": false },
+      { "answerText": "2005", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 9,
+    "pregunta": "El movimiento de la Secesión Vienesa, surgido en el final del siglo XIX, tuvo entre sus miembros:",
+    "answerOptions": [
+      { "answerText": "Frances McDonald", "isCorrect": false },
+      { "answerText": "Herbert Bayer", "isCorrect": false },
+      { "answerText": "Koloman Moser", "isCorrect": true },
+      { "answerText": "Theo van Doesburg", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 10,
+    "pregunta": "Alfons M. Mucha, pintor, diseñador e ilustrador del movimiento Art Nouveau, ¿en qué país nació?",
+    "answerOptions": [
+      { "answerText": "República Checa", "isCorrect": true },
+      { "answerText": "Bélgica", "isCorrect": false },
+      { "answerText": "Alemania", "isCorrect": false },
+      { "answerText": "Francia", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 11,
+    "pregunta": "¿Cuál es la primera empresa del mundo en crear una identidad de marca corporativa?",
+    "answerOptions": [
+      { "answerText": "La alemana AEG, en 1907", "isCorrect": true },
+      { "answerText": "La británica Unilever, en 1935", "isCorrect": false },
+      { "answerText": "La japonesa Sony, en 1950", "isCorrect": false },
+      { "answerText": "La americana General Electric, en 1900", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 12,
+    "pregunta": "El diseño de la marca Itaú, en las décadas del 70 y 80, era en blanco y negro. ¿Por qué?",
+    "answerOptions": [
+      { "answerText": "Porque el material gráfico en blanco y negro era más económico", "isCorrect": false },
+      { "answerText": "Porque la palabra “Itaú”, en tupi-guarani, significa “piedra negra”", "isCorrect": true },
+      { "answerText": "Porque el banco tenía un perfil más sobrio", "isCorrect": false },
+      { "answerText": "Porque la palabra “Itaú”, en dialecto gallego, significa “pájaro negro”", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 13,
+    "pregunta": "¿Cuál es el hombre considerado, por muchos, el primer diseñador de la historia?",
+    "answerOptions": [
+      { "answerText": "David Ogilvy", "isCorrect": false },
+      { "answerText": "Walter Gropius", "isCorrect": false },
+      { "answerText": "Saul Bass", "isCorrect": false },
+      { "answerText": "Peter Behrens", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 14,
+    "pregunta": "La evolución del diseño de la marca Itaú, a lo largo de los 100 años del banco, ha considerado, principalmente:",
+    "answerOptions": [
+      { "answerText": "la tecnología", "isCorrect": false },
+      { "answerText": "el costo", "isCorrect": false },
+      { "answerText": "las personas", "isCorrect": true },
+      { "answerText": "el negocio", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 15,
+    "pregunta": "¿Cuál de los nombres de abajo pertenece a la Escuela de Glasgow, del final del siglo XIX?",
+    "answerOptions": [
+      { "answerText": "Charles Rennie Mackintosh", "isCorrect": true },
+      { "answerText": "Koloman Moser", "isCorrect": false },
+      { "answerText": "Henry van der Velde", "isCorrect": false },
+      { "answerText": "Jan Tschichold", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 16,
+    "pregunta": "El mote de la cultura ituber es:",
+    "answerOptions": [
+      { "answerText": "Cada uno es guiado por sus propias necesidades", "isCorrect": false },
+      { "answerText": "Vamos poco a poco", "isCorrect": false },
+      { "answerText": "La cultura interna es lo más importante", "isCorrect": false },
+      { "answerText": "Vamos en equipo", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 17,
+    "pregunta": "Para los itubers, ética es:",
+    "answerOptions": [
+      { "answerText": "innegociable", "isCorrect": true },
+      { "answerText": "solamente un detalle", "isCorrect": false },
+      { "answerText": "posible", "isCorrect": false },
+      { "answerText": "opcional", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 18,
+    "pregunta": "¿Cuál de las afirmaciones de abajo corresponde a la actitud ituber?",
+    "answerOptions": [
+      { "answerText": "Necesitamos saber todo", "isCorrect": false },
+      { "answerText": "No sabemos todo", "isCorrect": true },
+      { "answerText": "Sabemos todo", "isCorrect": false },
+      { "answerText": "Nos satisfacemos con lo que sabemos", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 19,
+    "pregunta": "De acuerdo con la cultura ituber, la innovación precisa considerar primeramente las necesidades:  ",
+    "answerOptions": [
+      { "answerText": "de gestión", "isCorrect": false },
+      { "answerText": "de la sociedad", "isCorrect": false },
+      { "answerText": "de los clientes", "isCorrect": true },
+      { "answerText": "de los colaboradores", "isCorrect": false }
+    ]
+  }
+  ,
+  {
+    "id": 20,
+    "pregunta": "¿Cuál de las afirmaciones de abajo NO CORRESPONDE a la cultura ituber?",
+    "answerOptions": [
+      { "answerText": "Ser ituber es enfocarse en un perfil específico de cliente.", "isCorrect": true },
+      { "answerText": "Ser ituber es probar, errar, aprender y mejorar", "isCorrect": false },
+      { "answerText": "Ser ituber es estar abierto a diferentes puntos de vista.", "isCorrect": false },
+      { "answerText": "Ser ituber es ser ambicioso en los objetivos y eficiente en la ejecución", "isCorrect": false }
+    ]
+  }
+
+]
