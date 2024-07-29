@@ -1,26 +1,32 @@
 <template>
   <div class="bg-2 ">
     <q-page class="flex flex-center column animate__animated animate__fadeIn">
-      <q-page-sticky position="bottom-right" :offset="[28, 780]">
+      <!-- <q-page-sticky position="bottom-right" :offset="[28, 780]">
         <img
           alt="Itau logo"
-          src="~assets/logo.svg"
+          src="~assets/punabio_logo.svg"
           style="width: 150px; height: 150px"
           @click="init"
         >
-      </q-page-sticky>
+      </q-page-sticky> -->
         <div class="row q-pb-lg">
           <div class="col-12">
-            <div class="text-h2 itau-font-blk">{{$t('init')}}</div>
-            <!-- <div class="text-h2 itau-font-blk">{{sendInit}}</div> -->
+            <div class="text-h2 itau-font-blk text-white">{{$t('init')}}</div>
           </div>
         </div>
         <div class="row q-gutter-xl">
-          <q-btn size="1.5rem" color="espanol" glossy rounded icon-right="play_circle" @click="$i18n.locale = 'es'">{{$t('esp')}}</q-btn>
-          <q-btn size="1.5rem" color="portugues" glossy rounded icon-right="play_circle" @click="$i18n.locale = 'pt'">{{$t('port')}}</q-btn>
-          <!-- <q-btn size="1.5rem" color="espanol" glossy rounded icon-right="play_circle" >{{sendEsp}}</q-btn>
-          <q-btn size="1.5rem" color="portugues" glossy rounded icon-right="play_circle">{{sendPort}}</q-btn> -->
+          <q-btn size="1.5rem" color="portugues" text-color="portugues" glossy rounded icon-right="play_circle" @click="$i18n.locale = 'es'">{{$t('esp')}}</q-btn>
+          <q-btn size="1.5rem" color="portugues" text-color="portugues" glossy rounded icon-right="play_circle" @click="$i18n.locale = 'pt'">{{$t('port')}}</q-btn>
+          <q-btn size="1.5rem" color="portugues" text-color="portugues" glossy rounded icon-right="play_circle" @click="$i18n.locale = 'en-US'">{{$t('en')}}</q-btn>
         </div>
+      <q-page-sticky position="bottom-left" :offset="[28, 24]">
+        <img
+          alt="Itau logo"
+          src="~assets/logo_pie.svg"
+          style="width: 56px; height: 56px"
+          @click="init"
+        >
+      </q-page-sticky>
       <q-page-sticky position="bottom-right" :offset="[28, 24]">
         <q-btn size="1.5rem" fab icon="navigate_next" color="portugues" @click="handleNext()">
           <q-tooltip anchor="bottom left" self="top middle" :offset="[10, 10]" class="bg-portugues text-subtitle2 text-center">{{$t('next')}}</q-tooltip>
@@ -52,7 +58,7 @@
 
 <style scoped>
  .bg-2{
-  background-image: url('../assets/fondo-2.png');
+  background-image: url('../assets/fondo-3.png');
   /* Full height */
   height: 100%;
 
@@ -60,5 +66,30 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+ }
+
+ @media screen and (min-width: 1080px) {
+  .bg-2{
+    background-image: url('../assets/fondo-3-vert.png');
+    /* Full height */
+    /* height: 100%; */
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+ }
+ @media screen and (min-width: 1920px) {
+  .bg-2{
+    background-image: url('../assets/fondo-3.png');
+    /* Full height */
+    /* height: 100%; */
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
  }
 </style>

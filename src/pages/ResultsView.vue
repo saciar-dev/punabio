@@ -1,18 +1,12 @@
 <template>
   <div class="bg-1 col flex flex-center" style="height: 100vh;">
     <div class="text-center">
-      <div class="text-h1 itau-font-blk q-pb-xl text-white">{{$t('msg_endless')}}</div>
-      <img
-        alt="Quasar logo"
-        src="~assets/logo.svg"
-        style="width: 150px; height: 150px"
-        @click="init"
-      >
-      <div class="text-h3 itau-font-rg q-pt-xl text-white">Resultado: {{showResult}}</div>
+      <div class="text-h1 itau-font-blk q-pb-xl q-px-xl text-white">{{$t('msg_endless')}}</div>
+      <div class="text-h3 animate__animated animate__rubberBand itau-font-rg q-pt-xl text-portugues">Respuestas correctas: {{showResult}}</div>
     </div>
   </div>
   <q-page-sticky position="bottom-right" :offset="[28, 24]">
-          <q-btn size="1.5rem" fab icon="home" color="primary" @click="handleHome()">
+          <q-btn size="1.5rem" fab icon="home" color="espanol" @click="handleHome()">
             <q-tooltip anchor="bottom left" self="top middle" :offset="[10, 10]" class="bg-portugues text-subtitle2 text-center">Siguiente</q-tooltip>
           </q-btn>
         </q-page-sticky>
@@ -23,6 +17,7 @@ import { useRouter } from 'vue-router';
 import { useQuestionStore } from 'src/stores/question-store';
 import { useUserStore } from 'src/stores/user-store';
 import {api} from 'boot/axios';
+import 'animate.css';
 
 const { clearRandomQuestions } = useQuestionStore();
 const { resetUsuario } = useUserStore()
@@ -38,7 +33,7 @@ const handleHome = () => {
 
   clearRandomQuestions();
   resetUsuario();
-  router.push('/lang')
+  router.push('/')
   }
 
   const showResult = localStorage.getItem('result');
@@ -47,7 +42,7 @@ const handleHome = () => {
     const dato = {
       "nombre": usuario.nombre,
       "email": usuario.email,
-      "telefono": usuario.telephone,
+      "zona": usuario.zona,
       "correctas": showResult
     }
 
@@ -62,7 +57,7 @@ const handleHome = () => {
 
 <style scoped>
 .bg-1{
-  background-image: url('../assets/fondo-4.png');
+  background-image: url('../assets/fondo-3-vert.png');
   /* Full height */
   height: 100%;
 

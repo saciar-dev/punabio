@@ -1,20 +1,12 @@
 <template>
   <div class="bg-2">
   <q-page class="flex flex-center column animate__animated animate__fadeIn">
-    <q-page-sticky position="bottom-right" :offset="[28, 780]">
-      <img
-        alt="Itau logo"
-        src="~assets/logo.svg"
-        style="width: 150px; height: 150px"
-        @click="init"
-      >
-      </q-page-sticky>
-      <q-page-sticky position="bottom-left" :offset="[28, 24]">
-        <q-btn size="1.5rem" fab icon="navigate_before" color="portugues" @click="handleBack()">
-          <q-tooltip anchor="bottom left" self="top middle" :offset="[10, 10]" class="bg-portugues text-subtitle2 text-center">{{$t('next')}}</q-tooltip>
-        </q-btn>
-      </q-page-sticky>
-    <div class="text-h3 q-pb-md itau-font-blk">{{$t('formTitle')}}</div>
+    <q-page-sticky position="bottom-left" :offset="[28, 24]">
+      <q-btn size="1.5rem" fab icon="navigate_before" color="portugues" @click="handleBack()">
+        <q-tooltip anchor="bottom left" self="top middle" :offset="[10, 10]" class="bg-portugues text-subtitle2 text-center">{{$t('next')}}</q-tooltip>
+      </q-btn>
+    </q-page-sticky>
+    <div class="text-h2 q-pb-md text-center itau-font-blk">{{$t('formTitle')}}</div>
   <div class="q-pa-xs " style="width: 50rem;">
     <q-form
     @submit="onSubmit"
@@ -22,6 +14,7 @@
       class="q-gutter-md q-mb-md"
     >
       <q-input
+      style="font-size: 1.5rem;"
       class="flex-inline"
         filled
         bg-color="white"
@@ -30,19 +23,20 @@
         :label="$t('name')"
         lazy-rules
         @input="onNameChange"
-        @focus="showNameKeyboard=true; showEmailKeyboard=false; showTelephoneKeyboard=false"
+        @focus="showNameKeyboard=true; showEmailKeyboard=false; showZoneKeyboard=false"
         :rules="[ val => val && val.length > 0 || $t('error')]"
       />
 
       <q-input
         filled
+        style="font-size: 1.5rem;"
         bg-color="white"
         color="portugues"
         v-model="email"
         :label="$t('email')"
         lazy-rules
         @input="onEmailChange"
-        @focus="showNameKeyboard=false; showEmailKeyboard=true; showTelephoneKeyboard=false"
+        @focus="showNameKeyboard=false; showEmailKeyboard=true; showZoneKeyboard=false"
         :rules="[
           val => val && val.length > 0 || $t('error'),
         ]"
@@ -51,12 +45,13 @@
       <q-input
         filled
         bg-color="white"
+        style="font-size: 1.5rem;"
         color="portugues"
-        v-model="telephone"
-        :label="$t('telephone')"
+        v-model="zone"
+        :label="$t('zone')"
         lazy-rules
-        @input="onTelephoneChange"
-        @focus="showNameKeyboard=false; showEmailKeyboard=false; showTelephoneKeyboard=true"
+        @input="onZoneChange"
+        @focus="showNameKeyboard=false; showEmailKeyboard=false; showZoneKeyboard=true"
         :rules="[
           val => val && val.length > 0 || $t('error'),
         ]"
@@ -66,7 +61,7 @@
 
       <div>
         <q-btn :label="$t('acept')" type="submit" color="portugues"/>
-        <q-btn :label="$t('reset')" type="reset" color="primary" flat class="q-ml-sm" />
+        <q-btn :label="$t('reset')" type="reset" color="espanol" flat class="q-ml-sm" />
       </div>
     </q-form>
 
@@ -76,7 +71,7 @@
   </div>
   <SimpleKeyboard style="width: 75%;" :lang="locale" @onChange="onNameChange" @onKeyPress="onNameKeyPress" :input="name" v-if="showNameKeyboard"></SimpleKeyboard>
   <SimpleKeyboard style="width: 75%;" :lang="locale" @onChange="onEmailChange" @onKeyPress="onEmailKeyPress" :input="email" v-if="showEmailKeyboard"></SimpleKeyboard>
-  <SimpleKeyboard style="width: 75%;" :lang="locale" @onChange="onTelephoneChange" @onKeyPress="onTelephoneKeyPress" :input="telephone" v-if="showTelephoneKeyboard"></SimpleKeyboard>
+  <SimpleKeyboard style="width: 75%;" :lang="locale" @onChange="onZoneChange" @onKeyPress="onZoneKeyPress" :input="zone" v-if="showZoneKeyboard"></SimpleKeyboard>
 </q-page>
 </div>
 </template>
@@ -97,29 +92,29 @@
   const { locale, t } = useI18n({ useScope: 'global' });
 
   const name = ref(null)
-  const telephone = ref(null)
+  const zone = ref(null)
   const email = ref(null)
   const accept = ref(false)
 
   const showNameKeyboard = ref(false);
   const showEmailKeyboard = ref(false);
-  const showTelephoneKeyboard = ref(false);
+  const showZoneKeyboard = ref(false);
 
   const { setUsuario } = useUserStore();
 
   const onSubmit = () => {
 
-    if(name.value != null && telephone.value !=null && email.value!=null && accept.value){
+    if(name.value != null && zone.value !=null && email.value!=null && accept.value){
       // if(checkUser()){
       //   setUsuario({
       //     nombre:name.value,
-      //     telephone: telephone.value,
+      //     Zone: Zone.value,
       //     email:email.value,
       //     aceptar:accept.value
       //   });
       //   localStorage.setItem('user', JSON.stringify({
       //     nombre:name.value,
-      //     telephone: telephone.value,
+      //     Zone: Zone.value,
       //     email:email.value,
       //     aceptar:accept.value
       //   }));
@@ -142,19 +137,19 @@
   }
 
   const checkUser = () =>{
-    api.get(`/usuario?email=${email.value}&telefono=${telephone.value}`)
+    api.get(`/usuario?email=${email.value}&zona=${zone.value}`)
     .then(response => {
       console.log(response);
       if(response.status == 204){
         setUsuario({
           nombre:name.value,
-          telephone: telephone.value,
+          zona: zone.value,
           email:email.value,
           aceptar:accept.value
         });
         localStorage.setItem('user', JSON.stringify({
           nombre:name.value,
-          telephone: telephone.value,
+          zona: zone.value,
           email:email.value,
           aceptar:accept.value
         }));
@@ -175,7 +170,7 @@
 
   const onReset = () => {
         name.value = null
-        telephone.value = null
+        zone.value = null
         email.value = null
         accept.value = false
       }
@@ -185,7 +180,7 @@
     const usuario =JSON.parse(localStorage.getItem('user'));
     if(usuario){
       name.value = usuario.nombre;
-      telephone.value = usuario.telephone;
+      zone.value = usuario.zona;
       email.value = usuario.email;
       accept.value = usuario.aceptar;
     }
@@ -208,13 +203,13 @@
     if(button == '{enter}')
     showEmailKeyboard.value = false;
   }
-  const onTelephoneChange = (input) => {
-      telephone.value = input;
+  const onZoneChange = (input) => {
+    zone.value = input;
   }
-  const onTelephoneKeyPress = (button) => {
+  const onZoneKeyPress = (button) => {
 
     if(button == '{enter}')
-    showTelephoneKeyboard.value = false;
+    showZoneKeyboard.value = false;
   }
   // const onInputChange = (input) => {
   //   console.log(input.target);
@@ -233,5 +228,30 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+ }
+
+ @media screen and (min-width: 1080px) {
+  .bg-2{
+    background-image: url('../assets/fondo-2-vert.png');
+    /* Full height */
+    /* height: 100%; */
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+ }
+ @media screen and (min-width: 1920px) {
+  .bg-2{
+    background-image: url('../assets/fondo-2.png');
+    /* Full height */
+    /* height: 100%; */
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
  }
 </style>

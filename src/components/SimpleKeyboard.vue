@@ -7,6 +7,7 @@ import Keyboard from "simple-keyboard";
 import "simple-keyboard/build/css/index.css";
 import layoutPort from "simple-keyboard-layouts/build/layouts/brazilian";
 import layoutEsp from "simple-keyboard-layouts/build/layouts/spanish";
+import layoutEn from "simple-keyboard-layouts/build/layouts/english";
 
 export default {
 
@@ -36,12 +37,20 @@ export default {
         ...layoutEsp
       });
     }
-    else {
+    else if (this.lang == 'pt'){
       this.keyboard = new Keyboard(this.keyboardClass, {
         onChange: this.onChange,
         onKeyPress: this.onKeyPress,
         theme: "simple-keyboard hg-theme-default hg-layout-default",
         ...layoutPort
+      });
+    }
+    else{
+      this.keyboard = new Keyboard(this.keyboardClass, {
+        onChange: this.onChange,
+        onKeyPress: this.onKeyPress,
+        theme: "simple-keyboard hg-theme-default hg-layout-default",
+        ...layoutEn
       });
     }
   },

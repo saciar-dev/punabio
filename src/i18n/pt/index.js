@@ -1,6 +1,7 @@
 export default {
   port: 'Português',
   esp: 'Espanhol',
+  en: 'Inglês',
   init: 'Olá! Escolha seu idioma.',
   next:'Seguindo',
 
@@ -15,18 +16,18 @@ export default {
   error: 'Por favor escreva algo',
   email:'Email',
   disclaim:'Eu aceito a cláusulas LGPD',
-  telephone:'Telefone',
+  zone:'Zona',
   acept: 'Aceitar',
   reset: 'Excluir',
   errorData: 'Você deve completar os dados',
   errorDisclaimer: 'Você deve aceitar os Termos e Condições',
-  errorDuplicate: 'Usuário com e-mail e telefone já utilizado!',
+  errorDuplicate: 'Usuário com e-mail e zona já utilizado!',
 
     //game
   gameReady: 'Vamos começar',
   correct: 'Corretas',
   msg_incorrect: 'Que pena, resposta incorreta!',
   msg_correct: 'Resposta certa!',
-  msg_endless: 'Obrigado pela participação',
+  msg_endless: 'Você já está concorrendo a alguns óculos RayBan e muito mais prêmios!',
   msg_result: 'Resultado: '
 }

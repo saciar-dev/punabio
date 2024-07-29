@@ -1,18 +1,18 @@
 <template>
-  <div class="bg-3">
+  <div class="bg-2">
     <q-page class="flex flex-center column animate__animated animate__fadeIn">
-      <div class="text-h1 itau-font-blk text-white" v-if="isLoading"> {{$t('gameReady')}} </div>
-      <div class="text-h1 itau-font-blk text-white animate__animated animate__bounce animate__repeat-3 " style="font-size: 15rem;" v-else> {{count}}</div>
+      <h1 class="itau-font-blk text-titulos" v-if="isLoading"> {{$t('gameReady')}} </h1>
+      <h1 class="text-titulos itau-font-blk animate__animated animate__bounce animate__repeat-3 " style="font-size: 15rem; ;" v-else> {{count}}</h1>
       <h1 class="itau-font"></h1>
 
-    <q-page-sticky position="bottom-right" :offset="[885, 108]">
+    <!-- <q-page-sticky position="bottom-right" :offset="[885, 108]">
         <img
           alt="Itau logo"
           src="~assets/logo.svg"
           style="width: 150px; height: 150px"
           @click="init"
         >
-        </q-page-sticky>
+        </q-page-sticky> -->
     </q-page>
   </div>
   </template>
@@ -64,8 +64,8 @@ onMounted(()=>{
 </script>
 
 <style scoped>
- .bg-3{
-  background-image: url('../assets/fondo-4.png');
+ .bg-2{
+  background-image: url('../assets/fondo-2.png');
   /* Full height */
   height: 100%;
 
@@ -73,5 +73,30 @@ onMounted(()=>{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+ }
+
+ @media screen and (min-width: 1080px) {
+  .bg-2{
+    background-image: url('../assets/fondo-2-vert.png');
+    /* Full height */
+    /* height: 100%; */
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+ }
+ @media screen and (min-width: 1920px) {
+  .bg-2{
+    background-image: url('../assets/fondo-2.png');
+    /* Full height */
+    /* height: 100%; */
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
  }
 </style>
