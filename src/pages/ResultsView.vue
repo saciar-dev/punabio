@@ -57,7 +57,7 @@ const handleHome = () => {
 
 <style scoped>
 .bg-1{
-  background-image: url('../assets/fondo-3-vert.png');
+  background-image: url('../assets/fondo-5-vert.png');
   /* Full height */
   height: 100%;
 

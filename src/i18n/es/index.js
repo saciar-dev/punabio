@@ -12,7 +12,7 @@ export default {
   finish:'Jugar',
 
   //form
-  formTitle:'Por favor, proporcione los detalles a continuación',
+  formTitle:'Por favor, proporcione los datos a continuación',
   name:'Nombre',
   error: 'Por favor escribe algo',
   email:'Email',

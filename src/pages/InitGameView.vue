@@ -77,7 +77,7 @@ onMounted(()=>{
 
  @media screen and (min-width: 1080px) {
   .bg-2{
-    background-image: url('../assets/fondo-2-vert.png');
+    background-image: url('../assets/fondo-4-vert.png');
     /* Full height */
     /* height: 100%; */
 

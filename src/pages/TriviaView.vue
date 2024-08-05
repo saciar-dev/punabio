@@ -251,7 +251,7 @@ const startQuiz = ref(false);
  }
 
  .bg-question-vert{
-  background-image: url('../assets/fondo-vertical-blanco.png');
+  background-image: url('../assets/fondo-vertical-blanco_2.png');
   /* Full height */
   height: 100%;
 
@@ -262,7 +262,7 @@ const startQuiz = ref(false);
  }
 
  .bg-answer-vert{
-  background-image: url('../assets/fondo-2-vert.png');
+  background-image: url('../assets/fondo-4-vert.png');
   /* Full height */
   height: 100%;
 

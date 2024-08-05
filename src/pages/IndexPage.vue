@@ -19,7 +19,7 @@
   const router = useRouter()
 
   const init = () => {
-    router.push('/lang');
+    router.push('/form');
   }
 </script>
 
