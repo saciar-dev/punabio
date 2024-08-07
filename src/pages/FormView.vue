@@ -165,7 +165,7 @@
 
   const handleBack = () =>{
     onReset();
-    router.push('/lang')
+    router.push('/')
   }
 
   const onReset = () => {
